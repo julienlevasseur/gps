@@ -48,10 +48,12 @@ func Tpv() (tpv *gpsd.TPVReport, err error) {
 }
 
 // Speed return the current gps speed.
-func Speed() (speed float64) {
+func Speed() (speed float64, err error) {
 	if TPV != nil {
-		return TPV.Speed
+		return TPV.Speed, nil
 	}
+
+	return 0, errors.New("no speed available")
 }
 //
 //// Coordinates return the current gps coordinates.
