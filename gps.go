@@ -47,12 +47,12 @@ func Tpv() (tpv *gpsd.TPVReport, err error) {
 	return nil, errors.New("TPVReport is not ready yet")
 }
 
-//// Speed return the current gps speed.
-//func Speed() (speed float64) {
-//	if TPV != nil {
-//		return TPV.Speed
-//	}
-//}
+// Speed return the current gps speed.
+func Speed() (speed float64) {
+	if TPV != nil {
+		return TPV.Speed
+	}
+}
 //
 //// Coordinates return the current gps coordinates.
 //func Coordinates() (lat, lon float64, err error) {
