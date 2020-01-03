@@ -32,7 +32,7 @@ func Init() {
 	<-done
 }
 
-// TPV return the TPV (Time, Position, Velocity) object.
+// Tpv return the TPV (Time, Position, Velocity) object.
 func Tpv() (tpv *gpsd.TPVReport, err error) {
 	if TPV != nil {
 		tpv.Speed = TPV.Speed
@@ -55,12 +55,12 @@ func Speed() (speed float64, err error) {
 
 	return 0, errors.New("no speed available")
 }
-//
-//// Coordinates return the current gps coordinates.
-//func Coordinates() (lat, lon float64, err error) {
-//	if TPV != nil {
-//		return TPV.Lat, TPV.Lon, nil
-//	}
-//
-//	return 0, 0, errors.New("Coordinates not aquired yet.\n")
-//}
+
+// Coordinates return the current gps coordinates.
+func Coordinates() (lat, lon float64, err error) {
+	if TPV != nil {
+		return TPV.Lat, TPV.Lon, nil
+	}
+
+	return 0, 0, errors.New("coordinates not aquired yet")
+}
