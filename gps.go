@@ -57,6 +57,7 @@ func Speed() (speed float64, err error) {
 	return 0, errors.New("no speed available")
 }
 
+// Time return the current gps time.
 func Time() (time time.Time, err error) {
 	if TPV != nil {
 		return TPV.Time, nil
