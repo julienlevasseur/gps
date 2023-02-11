@@ -2,4 +2,4 @@ module github.com/julienlevasseur/gps/coordinates
 
 go 1.19
 
-require github.com/umahmood/haversine v0.0.0-20151105152445-808ab04add26
+require github.com/julienlevasseur/haversine v0.0.0-20230211142453-7020a5c95f0a

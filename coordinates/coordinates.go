@@ -3,7 +3,7 @@ package coordinates
 import (
 	"math"
 
-	"github.com/umahmood/haversine"
+	"github.com/julienlevasseur/haversine"
 )
 
 func RoundTo1Decimal(coords haversine.Coord) haversine.Coord {
