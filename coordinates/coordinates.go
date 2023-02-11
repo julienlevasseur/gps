@@ -27,7 +27,7 @@ func RoundTo3Decimals(coords haversine.Coord) haversine.Coord {
 	}
 }
 
-func RoundTo5Decimals(coords haversine.Coord) haversine.Coord {
+func RoundTo4Decimals(coords haversine.Coord) haversine.Coord {
 	return haversine.Coord{
 		lat: math.Round(coords.Lat*10000) / 10000,
 		lon: math.Round(coords.Lon*10000) / 10000,
